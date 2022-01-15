@@ -1,0 +1,60 @@
+body {
+    background-image: linear-gradient(
+        180deg,
+        #38ef7d 5%,
+        #a8ff78 20%,
+        #11998e 60%,
+        #00F260 95%
+    );
+
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+main{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;   
+}
+
+main > section > div img{
+    display: flex;
+    height: 300px;
+    margin: 15px 0;
+}
+
+main > section ul#detalhes-personagen{
+    display: block;
+}
+
+main > section button {
+    background-color: #11998e;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    line-height: 15px;
+    padding: 9px 23px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#detalhes-container {
+    font-weight: bold;
+    list-style-type: none;
+    width: 90%;
+    
+}
+#detalhes-container > li {
+    align-items: baseline;
+    display: flex;
+}
+#detalhes-container > li p{
+    color: #fff;
+}
