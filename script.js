@@ -34,7 +34,7 @@ pegarListadePersonagem = async () => {
     console.log(personagem);
     const { name, image, species, status } = personagem;
     html += `<img alt="${image}" src=${image} >`;
-    html += `<ul id="detalhes-container>
+    html += `<ul id="detalhes-container">
                 <li>Nome:<p id="nome">${name}</p></li>
                 <li>Espécie:<p id="especie">${species}</p></li>
                 <li>Esta Vivo?:<p id="condicao">${status}</p></li>
