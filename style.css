@@ -19,7 +19,9 @@ main{
     justify-content: center;
     position: relative;   
 }
-
+main > section > div{
+    display: flex;
+}
 main > section > div img{
     display: flex;
     height: 300px;
@@ -27,7 +29,7 @@ main > section > div img{
 }
 
 main > section ul#detalhes-personagen{
-    display: block;
+    display: flex;
 }
 
 main > section button {
