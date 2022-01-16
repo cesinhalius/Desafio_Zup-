@@ -1,5 +1,5 @@
-const botao = documemt.querySelector("button");
-const Persongem = document.querySelector("#personagens");
+const botao = document.querySelector('button'); 
+const personagemDIV = document.getElementById("personagens");
 
 gerarValorAleatorio = () => {
   return Math.floor(Math.random() * 671);
@@ -17,8 +17,8 @@ let getPersonagens = async (total = 3) => {
     {
       method: "GET",
       headers: {
-        Accept: " application/json ",
-        " Content-Type ": "application/json",
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
     }
   );
@@ -31,17 +31,18 @@ pegarListadePersonagem = async () => {
   let p = await getPersonagens();
 
   p.forEach((personagem) => {
+    console.log(personagem);
     const { name, image, species, status } = personagem;
-
     html += `<img alt="${image}" src=${image} >`;
     html += `<ul id="detalhes-container>
                 <li>Nome:<p id="nome">${name}</p></li>
                 <li>Espécie:<p id="especie">${species}</p></li>
-                <li>Esta Vivo?:<p id="condicao">${name}</p></li>
+                <li>Esta Vivo?:<p id="condicao">${status}</p></li>
         </ul>`;
   });
-
-  Persongem.innerHTML = html;
+  console.log(html);
+  
+  personagemDIV.innerHTML = html;
 };
 
 botao.onclick = pegarListadePersonagem;
